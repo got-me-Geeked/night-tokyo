@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ @font-face {
+    font-family: 'VictoryFont';
+    src: url('Montserrat-Bold.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 700;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;      
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /*сохраняет пропорции*/
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 50px;
+    font-family: 'VictoryFont', sans-serif;
+    /*background-color: gray;*/
+    text-align: center;
+    overflow: hidden;
+}
+
+.content h1 {
+    width:100%;
+    height: auto;
+    padding:10px;
+    line-height: 50px;
+    margin:0 auto;
+    
+}
+
+.common-block {
+    font-size:larger;
+    min-height: 30%;
+}
+
+
+.answer-block {
+    min-height: 50%;
+    /*background-color: brown;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content ul {
+    list-style: none;
+   /* background-color: aqua;*/
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 0;
+}
+
+
+p {
+    padding: 15px;
+    font-size: 120%;
+    /*background-color: aqua;*/
+   /* display: inline-block;*/
+}
+
+p::after { 
+    display: none;
+    content:"";
+    margin-left: 8px; 
+    font-size:110%;
+    font-weight: bold;  
+}
+
+.correct-marker::after {
+    content: "\2611";
+    display: inline-block;  
+    color: rgb(47, 185, 47);  
+}
+
+.incorrect-marker::after {
+    content: "\2612";
+    display: inline-block;  
+    color: rgb(185, 47, 47);  
+}
+
+li {
+    /*background-color: rgb(15, 93, 93);*/
+    margin:0 auto;
+    min-width: 30%;
+    max-width: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    all: unset; /*Сброс стилей*/
+    display: inline-block;
+    font: inherit;
+    color: inherit;
+    padding: 15px;
+    background:rgba(10, 10, 55, 0.649);
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 20px;
+    max-width: 100%;     
+    min-width: 65%;
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0);
+    transition: box-shadow 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.content li button:hover {
+    box-shadow: 0 0 0 4px white;
+}
+
+.content li:first-child button:hover {
+     transform: translateY(-2px);
+}
+
+.content li:last-child button:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 0 0 4px white;
+     /*border:1px solid white;*/
+}
+
+.content li:not(:last-child, :first-child) button:hover {
+    transform: translateY(-2px);
+}
+
+#desc {
+    display: inline-block;
+    width:80%;
+    margin:0 auto;
+    background-color:rgba(28, 160, 37, 0.649);
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+    padding: 30px;    
+}

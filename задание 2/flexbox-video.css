@@ -1,0 +1,236 @@
+body {
+    background-color: white;
+}
+
+#back {
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    background-image: linear-gradient(rgb(108, 189, 255), rgb(255, 255, 129));
+    position: relative;
+    container-type: size;
+    border: 2cqw solid gray;
+}
+
+label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#hidden_checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;   
+    height: 100%;  
+    opacity: 0;   /*прозрачность - полностью невидим*/
+    z-index: 200;  
+    cursor: pointer;
+}
+
+/* ПЕРВОЕ СОСТОЯНИЕ */
+#around_car_1.state-1 {
+    position: relative;
+    width: auto;
+    height: 55%;
+    aspect-ratio: 14/9;
+}
+
+#car_1 {
+    width: 100%;
+    position: relative;
+    z-index: 100;
+}
+
+.wheels {
+    width: 97%;
+    height: 45%;
+    position: absolute;
+    margin-top: -31%;
+    margin-left: 5.2%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 150;
+    cursor: pointer;
+    pointer-events: none;
+    /*background-color: blueviolet;*/
+}
+
+#wheel_1, #wheel_2 {
+    position: relative;
+    width: 30%;      
+    height: 100%;   
+    object-fit: cover;     
+    flex-shrink: 0;
+    border-radius: 50%;
+    z-index: 50;
+    pointer-events: auto;
+}
+
+#belka_1 {
+    display: none;
+    height: 32%;
+    position: absolute;
+    z-index: 200;
+    margin-top: 9.5%;
+    margin-left: 32%;
+}
+
+#text1 {
+    display: none;
+    position: absolute;
+    top: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6cqw;
+    color: rgb(50, 50, 255);
+}
+
+/* Наведение мыши */
+#hidden_checkbox:not(:checked) ~ label:hover #belka_1,
+#hidden_checkbox:not(:checked) ~ label:hover #text1 {
+    display: block !important;
+}
+
+#hidden_checkbox:not(:checked) ~ label:hover #car_1 {
+    animation: shake 0.25s linear infinite;
+}
+
+#hidden_checkbox:not(:checked) ~ label .wheels:hover #wheel_1,
+#hidden_checkbox:not(:checked) ~ label .wheels:hover #wheel_2 {
+    animation: circling 3.5s linear infinite;
+}
+
+
+/* ВТОРОЕ СОСТОЯНИЕ */
+#around_car_2.state-2 {
+    display: none;
+    position: relative;
+    width: auto;
+    height: 55%;
+    aspect-ratio: 14/9;
+    /*background-color: blueviolet;*/
+}
+
+#text2 {
+    display: none; /* Изначально скрыт */
+    position: absolute;
+    top: 26%;
+    right: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(97, 97, 97);
+    font-size: 7cqw;
+    /*background-color: lightcyan;*/
+}
+
+#belka_2 {
+    display: none;
+    height: 70%;     
+    width:auto;
+    position: absolute;
+    z-index: 200;
+    top:50%;
+    left:10%;
+    animation: curveMove 6s ease-in-out 1 forwards;
+    animation-delay: 2s;
+    offset-rotate: 0deg;
+    offset-path: path("M 124 57 C 98 25 98 25 71 57 C 68 59 62 63 56 56 C 28 23 30 23 8 56 C 5 59 8 56 -111 56");
+}
+
+#car_2 {
+    display: none;
+    height: auto;
+    width:110%;
+    position: relative;
+    top:-30%;
+    left:-6%;
+    /*background-color: lightcyan;*/
+}
+
+svg {
+    display:none;
+    position: absolute;
+    top:0;
+    background-color: aqua;
+}
+
+
+/* ПЕРЕКЛЮЧЕНИЕ СОСТОЯНИЙ ПРИ КЛИКЕ */
+
+/* Первое состояние - когда чекбокс НЕ активирован */
+#hidden_checkbox:not(:checked) ~ label #around_car_1.state-1 {
+    display: block;
+}
+
+#hidden_checkbox:not(:checked) ~ label #around_car_2.state-2 {
+    display: none;
+}
+
+#hidden_checkbox:not(:checked) ~ label #text2 {
+    display: none;
+}
+
+/* Второе состояние - когда чекбокс активирован */
+#hidden_checkbox:checked ~ label {
+    animation: shake_flex 0.5s linear infinite;
+}
+#hidden_checkbox:checked ~ label #around_car_1.state-1 {
+    display: none;
+}
+
+#hidden_checkbox:checked ~ label #around_car_2.state-2 {
+    display: block;
+}
+
+#hidden_checkbox:checked ~ label #text1 {
+    display: none; 
+}
+
+#hidden_checkbox:checked ~ label #text2 {
+    display: block; 
+}
+
+#hidden_checkbox:checked ~ label #belka_2,
+#hidden_checkbox:checked ~ label #car_2, svg {
+    display: block;
+}
+
+
+/* АНИМАЦИИ */
+@keyframes shake {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-0.5%); }
+    75% { transform: translateY(0.5%); }
+}
+
+@keyframes circling {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+
+@keyframes curveMove {
+    /*0% {transform: translate(0%, 0%);}
+    20% {transform: translate(-35%, -35%);}
+    40% {transform: translate(-70%, 0%);}
+    60% {transform: translate(-105%, -30%);}
+    80% {transform: translate(-140%, 0%);}
+    100% { transform: translate(-350%, 0%);}*/
+    from {
+        offset-distance: 0%;
+    }
+    to {
+        offset-distance: 100%;
+    }
+}
+
+@keyframes shake_flex {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-0.1%); }
+    75% { transform: translateY(0.1%); }
+}
