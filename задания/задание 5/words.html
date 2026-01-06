@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Слова/1Вариант</title>
+    <link rel="stylesheet" href="words.css" />
+    <script src="words.js" defer></script>
+  </head>
+  <body>
+    <div id="main">
+      <div
+        id="block3"
+        ondragenter="dragEnter(event)"
+        ondrop="dragDrop(event)"
+        ondragover="dragOver(event)"
+      ></div>
+      <div id="group">
+        <div
+          id="block2"
+          ondragenter="dragEnter(event)"
+          ondrop="dragDrop(event)"
+          ondragover="dragOver(event)"
+        ></div>
+        <div id="block1">
+          <div id="pipi">
+            <input id="inputData" type="text" />
+            <input
+              id="agreeButton"
+              type="submit"
+              value="Разобрать"
+              onclick="Process()"
+            />
+          </div>
+          <div id="show"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

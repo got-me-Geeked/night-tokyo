@@ -1,93 +1,122 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Галерея - Ночной Токио</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <video id="bg-video" autoplay muted loop playsinline>
-            <source src="videos/stars-background.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-        </video>
-        <div>
-            <span class="logo-text">Ночной Токио</span>
-        </div>
+      <video id="bg-video" autoplay muted loop playsinline>
+        <source src="videos/stars-background.mp4" type="video/mp4" />
+        Ваш браузер не поддерживает видео.
+      </video>
+      <div>
+        <span class="logo-text">Ночной Токио</span>
+      </div>
     </header>
-    
+
     <nav>
-            <ul class="nav-menu">
-                <li>Меню <span id="menu-icon">☰</span></li>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="districts.html">Районы</a></li>
-                <li><a href="attractions.html">Достопримечательности</a></li>
-                <li><a href="map.html" >Карта</a></li>
-                <li><a href="gallery.html" class="active">Галерея</a></li>
-                <li><a href="задания/задание 1/training2.html">Задание 1</a></li>
-                <li><a href="задания/задание 2/flexbox-video.html">Задание 2</a></li>
-                <li><a href="задания/задание 4/domtest.html">Задание 3</a></li>
-            </ul>
+      <ul class="nav-menu">
+        <li>Меню <span id="menu-icon">☰</span></li>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="districts.html">Районы</a></li>
+        <li><a href="attractions.html">Достопримечательности</a></li>
+        <li><a href="map.html">Карта</a></li>
+        <li><a href="gallery.html" class="active">Галерея</a></li>
+        <li><a href="задания/задание 1/training2.html">Задание 1</a></li>
+        <li><a href="задания/задание 2/flexbox-video.html">Задание 2</a></li>
+        <li><a href="задания/задание 4/domtest.html">Задание 3</a></li>
+        <li><a href="задания/задание 5/words.html">Задание 4</a></li>
+      </ul>
     </nav>
 
     <main>
-        <div class="hero">
-            <div>
-                <h1>Визуальное путешествие по ночному городу</h1>
-            </div>
+      <div class="hero">
+        <div>
+          <h1>Визуальное путешествие по ночному городу</h1>
+        </div>
+      </div>
+
+      <div class="text-content">
+        <div class="gallery-categories">
+          <h3>Категории</h3>
+          <div class="categories-list">
+            <button class="category-btn active" data-category="all">
+              Все фото
+            </button>
+            <button class="category-btn" data-category="architecture">
+              Архитектура
+            </button>
+            <button class="category-btn" data-category="streets">Улицы</button>
+            <button class="category-btn" data-category="landmarks">
+              Достопримечательности
+            </button>
+          </div>
         </div>
 
-        <div class="text-content">
-                <div class="gallery-categories">
-                    <h3>Категории</h3>
-                    <div class="categories-list">
-                        <button class="category-btn active" data-category="all">Все фото</button>
-                        <button class="category-btn" data-category="architecture">Архитектура</button>
-                        <button class="category-btn" data-category="streets">Улицы</button>
-                        <button class="category-btn" data-category="landmarks">Достопримечательности</button>
-                    </div>
-                </div>
-
-                <div class="gallery-container">
-                    <div class="gallery-item" data-category="architecture">
-                        <div class="image-placeholder">
-                    
-                            <img src="images/архитектура ночного токио.jpg" alt="Современная архитектура" width="600" height="400">
-                        </div>
-                        <p class="image-caption">Неоновые огни Синдзюку</p>
-                    </div>
-                    
-                    <div class="gallery-item" data-category="streets">
-                        <div class="image-placeholder">
-                            <img src="images/ночные улицы токио.jpg" alt="Ночные улицы" width="600" height="400">
-                        </div>
-                        <p class="image-caption">Улицы ночного города</p>
-                    </div>
-                    
-                    <div class="gallery-item" data-category="landmarks">
-                        <div class="image-placeholder">
-                            <img src="images/Токийская башня.jpg" alt="Токийская телебашня" width="600" height="400">
-                        </div>
-                        <p class="image-caption">Токийская телебашня</p>
-                    </div>
-                    
-                    <div class="gallery-item" data-category="architecture">
-                        <div class="image-placeholder">
-                            <img src="images/ночь небоскребы.jpg" alt="Небоскребы" width="600" height="400">
-                        </div>
-                        <p class="image-caption">Лес небоскребов</p>
-                    </div>
-                </div>
+        <div class="gallery-container">
+          <div class="gallery-item" data-category="architecture">
+            <div class="image-placeholder">
+              <img
+                src="images/архитектура ночного токио.jpg"
+                alt="Современная архитектура"
+                width="600"
+                height="400"
+              />
             </div>
+            <p class="image-caption">Неоновые огни Синдзюку</p>
+          </div>
+
+          <div class="gallery-item" data-category="streets">
+            <div class="image-placeholder">
+              <img
+                src="images/ночные улицы токио.jpg"
+                alt="Ночные улицы"
+                width="600"
+                height="400"
+              />
+            </div>
+            <p class="image-caption">Улицы ночного города</p>
+          </div>
+
+          <div class="gallery-item" data-category="landmarks">
+            <div class="image-placeholder">
+              <img
+                src="images/Токийская башня.jpg"
+                alt="Токийская телебашня"
+                width="600"
+                height="400"
+              />
+            </div>
+            <p class="image-caption">Токийская телебашня</p>
+          </div>
+
+          <div class="gallery-item" data-category="architecture">
+            <div class="image-placeholder">
+              <img
+                src="images/ночь небоскребы.jpg"
+                alt="Небоскребы"
+                width="600"
+                height="400"
+              />
+            </div>
+            <p class="image-caption">Лес небоскребов</p>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Ночной Токио. Все права защищены.</p>
-            <p>Исследуйте город, который никогда не спит</p>
-        </div>
+      <div class="footer-content">
+        <p>&copy; 2024 Ночной Токио. Все права защищены.</p>
+        <p>Исследуйте город, который никогда не спит</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

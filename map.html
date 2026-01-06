@@ -1,83 +1,100 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Карта Токио - Ночной Токио</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-     <header>
-        <video id="bg-video" autoplay muted loop playsinline>
-            <source src="videos/stars-background.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-        </video>
-        <div>
-            <span class="logo-text">Ночной Токио</span>
-        </div>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <video id="bg-video" autoplay muted loop playsinline>
+        <source src="videos/stars-background.mp4" type="video/mp4" />
+        Ваш браузер не поддерживает видео.
+      </video>
+      <div>
+        <span class="logo-text">Ночной Токио</span>
+      </div>
     </header>
-    
+
     <nav>
-            <ul class="nav-menu">
-                <li>Меню <span id="menu-icon">☰</span></li>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="districts.html">Районы</a></li>
-                <li><a href="attractions.html">Достопримечательности</a></li>
-                <li><a href="map.html" class="active">Карта</a></li>
-                <li><a href="gallery.html">Галерея</a></li>
-                <li><a href="задания/задание 1/training2.html">Задание 1</a></li>
-                <li><a href="задания/задание 2/flexbox-video.html">Задание 2</a></li>
-                <li><a href="задания/задание 4/domtest.html">Задание 3</a></li>
-            </ul>
+      <ul class="nav-menu">
+        <li>Меню <span id="menu-icon">☰</span></li>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="districts.html">Районы</a></li>
+        <li><a href="attractions.html">Достопримечательности</a></li>
+        <li><a href="map.html" class="active">Карта</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="задания/задание 1/training2.html">Задание 1</a></li>
+        <li><a href="задания/задание 2/flexbox-video.html">Задание 2</a></li>
+        <li><a href="задания/задание 4/domtest.html">Задание 3</a></li>
+        <li><a href="задания/задание 5/words.html">Задание 4</a></li>
+      </ul>
     </nav>
 
     <main>
-        <div class="hero">
-            <div>
-                <h1>Карта Токио</h1>
-            </div>
+      <div class="hero">
+        <div>
+          <h1>Карта Токио</h1>
+        </div>
+      </div>
+
+      <div class="text-content">
+        <h2>Навигация по ночному городу</h2>
+
+        <div class="map-container">
+          <div class="map-placeholder">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.3498349999997!2d139.6503!3d35.6762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcd44ac5c30000000!2z0KLQvtC50L3QuA!5e0!3m2!1sru!2sru!4v1234567890"
+              width="100%"
+              height="400"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
         </div>
 
-        <div class="text-content">
-                <h2>Навигация по ночному городу</h2>
-                
-                <div class="map-container">
-                    <div class="map-placeholder">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.3498349999997!2d139.6503!3d35.6762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcd44ac5c30000000!2z0KLQvtC50L3QuA!5e0!3m2!1sru!2sru!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
-
-                <div class="map-locations">
-                    <h3>Ключевые локации</h3>
-                    <div class="location-list">
-                        <div class="location-item">
-                            <h4>Синдзюку</h4>
-                            <p>Коммерческий и развлекательный центр</p>
-                            <a href="https://goo.gl/maps/example" class="btn" target="_blank">Открыть в Google Maps</a>
-                        </div>
-                        
-                        <div class="location-item">
-                            <h4>Сибуя</h4>
-                            <p>Знаменитый перекресток и шопинг</p>
-                            <a href="https://goo.gl/maps/example" class="btn" target="_blank">Открыть в Google Maps</a>
-                        </div>
-                        
-                        <div class="location-item">
-                            <h4>Асакуса</h4>
-                            <p>Исторический район с храмами</p>
-                            <a href="https://goo.gl/maps/example" class="btn" target="_blank">Открыть в Google Maps</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="map-locations">
+          <h3>Ключевые локации</h3>
+          <div class="location-list">
+            <div class="location-item">
+              <h4>Синдзюку</h4>
+              <p>Коммерческий и развлекательный центр</p>
+              <a href="https://goo.gl/maps/example" class="btn" target="_blank"
+                >Открыть в Google Maps</a
+              >
             </div>
+
+            <div class="location-item">
+              <h4>Сибуя</h4>
+              <p>Знаменитый перекресток и шопинг</p>
+              <a href="https://goo.gl/maps/example" class="btn" target="_blank"
+                >Открыть в Google Maps</a
+              >
+            </div>
+
+            <div class="location-item">
+              <h4>Асакуса</h4>
+              <p>Исторический район с храмами</p>
+              <a href="https://goo.gl/maps/example" class="btn" target="_blank"
+                >Открыть в Google Maps</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Ночной Токио. Все права защищены.</p>
-            <p>Исследуйте город, который никогда не спит</p>
-        </div>
+      <div class="footer-content">
+        <p>&copy; 2024 Ночной Токио. Все права защищены.</p>
+        <p>Исследуйте город, который никогда не спит</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
