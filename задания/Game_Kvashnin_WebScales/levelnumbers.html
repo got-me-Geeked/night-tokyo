@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Level</title>
+    <link rel="stylesheet" href="css/numbers.css" />
+    <script src="js/star.js" defer></script>
+    <script src="js/initconfig.js" defer></script>
+    <script src="js/timer.js" defer></script>
+    <script src="js/animation scales.js" defer></script>
+    <script src="js/animation numbers.js" defer></script>
+    <script src="js/draggingHadlers.js" defer></script>
+    <script src="js/dragZone.js" defer></script>
+    <script src="js/calcPoints.js" defer></script>
+    <script src="js/shownum.js" defer></script>
+    <script src="js/logic.js" defer></script>
+  </head>
+  <body>
+    <div class="title">
+      🌧️ Дождь чисел
+      <div class="clue">
+        <span>Подсказка</span>
+        <div class="clue-around">
+          <div class="clue-text">
+            Захватывайте падающие числа мышкой и перетаскивайте в выделенную
+            зону, чтобы уравнять весы. Для того, чтобы убрать числа из зоны
+            нужно дважды кликнуть по числу. При уравнении весов за отведенное
+            время вы получите 100 очков. Если вы создаете перевес, то вам
+            засчитывается фиксированный штраф -15 очков. В рейтинге учитывается
+            самая лучшая попытка игрока.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="result">
+      <p>Уровень завершен!</p>
+      <p>Ваши очки: <span>0</span></p>
+      <button id="menu-btn">К уровням</button>
+    </div>
+    <div class="controls">
+      <div class="control-group">
+        <label
+          >Количество чисел:
+          <span id="count-value" class="value">0</span></label
+        >
+      </div>
+
+      <div class="control-group">
+        <label
+          >Скорость падения:
+          <span id="speed-value" class="value">0</span></label
+        >
+      </div>
+
+      <div class="control-group">
+        <label
+          >Размер чисел: <span id="size-value" class="value">0</span></label
+        >
+      </div>
+
+      <div class="control-group">
+        <label
+          >Используемые числа: <span id="char-value" class="value"></span
+        ></label>
+      </div>
+
+      <div class="control-group">
+        <label
+          >Количество набранных очков:
+          <span id="point-value" class="value">0</span></label
+        >
+      </div>
+
+      <div class="control-group">
+        <label
+          >Общий штраф: <span id="penalty-value" class="value">0</span></label
+        >
+      </div>
+
+      <div class="control-group">
+        <label
+          >Время: <span id="timer-display" class="value">00:00</span></label
+        >
+      </div>
+
+      <div class="control-group">
+        <button id="start-btn">▶️ Старт</button>
+        <button id="stop-btn">Выйти</button>
+      </div>
+      <div id="show-penalty">Получен штраф: <span>0</span></div>
+    </div>
+
+    <div class="around_scales">
+      <div id="schigh-part">
+        <div id="draggable-area">
+          <div id="drop-zone" class="drop-zone"></div>
+        </div>
+        <div id="leftcup">
+          <div class="upcup"></div>
+          <div class="under-cup"></div>
+        </div>
+
+        <div id="rightcup">
+          <div id="upper-rightcup"></div>
+          <div class="upcup"></div>
+          <div class="under-cup"></div>
+        </div>
+      </div>
+      <div id="sclow-part">
+        <div id="lever" class="scales-item"></div>
+        <div id="center" class="scales-item"></div>
+        <div id="bottom" class="scales-item"></div>
+      </div>
+      <div id="counter-part">
+        <div class="player-cup"></div>
+        <div class="level-cup"></div>
+      </div>
+    </div>
+  </body>
+</html>

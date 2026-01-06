@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/index.js" defer></script>
+    <script src="js/star.js" defer></script>
+  </head>
+  <body>
+    <div class="auth-container">
+      <div class="auth-box">
+        <h1>Регистрация/Вход</h1>
+
+        <form id="auth-form">
+          <div class="form-group">
+            <label for="username">Введите ваше имя:</label>
+            <input type="text" id="username" required autofocus />
+            <div class="hint">Имя сохранится для рейтинга</div>
+          </div>
+
+          <button
+            type="submit"
+            class="btn-username"
+            onclick="handleNewUserEnter()"
+          >
+            Войти как новый игрок
+          </button>
+
+          <button
+            type="submit"
+            class="btn-username"
+            onclick="handleUserEnter()"
+          >
+            Войти как игрок
+          </button>
+
+          <button type="button" class="btn-guest" onclick="handleGuestEnter()">
+            Войти как гость
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stats</title>
+    <link rel="stylesheet" href="css/stats.css" />
+    <script src="js/stats.js" defer></script>
+  </head>
+  <body>
+    <div class="menu">
+      <h1>🏆 Таблица рейтинга</h1>
+
+      <div id="table-cont">
+        <h2>Лучшие игроки</h2>
+        <div id="table-around">
+          <table id="leaderTable">
+            <thead>
+              <tr>
+                <th class="username-col">Игрок</th>
+                <th class="levels-col">Пройденные уровни</th>
+                <th class="score-col">Общий счет</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="noDataRow">
+                <td colspan="3" class="no-data">Нет данных о игроках</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <a href="menu.html" class="menu-item">⬅️ Вернуться в меню</a>
+    </div>
+  </body>
+</html>
