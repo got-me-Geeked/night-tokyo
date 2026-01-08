@@ -48,7 +48,7 @@ function createImage(name, value) {
   const img = document.createElement("img");
 
   // Устанавливаем источник и атрибуты размеров
-  img.src = `./img/${name}`;
+  img.src = `../img/${name}`;
   img.width = settings.size;
   img.height = settings.size;
   img.top = "-100px";
